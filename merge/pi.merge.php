@@ -11,7 +11,7 @@ $plugin_info = array(
 );
 
 /**
-* Form Class
+* Merge Class
 *
 * @package		ExpressionEngine
 * @category		Plugin
@@ -36,7 +36,7 @@ class Merge {
 	function build()
 	{	
 	
-		/* Initaial Variables */
+		/* Grab all the data from the view */
 			$tag_content = $this->EE->TMPL->tagdata;
 			$this->minify_code = $this->EE->TMPL->fetch_param('minify');
 			
