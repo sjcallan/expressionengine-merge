@@ -96,7 +96,7 @@ class Merge {
 			
 			if(preg_match_all($regex, $tag_content, $matches)) { 
 				
-				foreach($matches[2] AS $match)
+				foreach($matches[1] AS $match)
 				{
 					$content .= $this->_file_get_contents($this->html_root . $match,$ext);
 					$filename = $this->_get_filename($match,$ext);
