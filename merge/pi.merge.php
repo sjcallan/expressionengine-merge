@@ -26,9 +26,26 @@ class Merge {
 		$this->EE =& get_instance();
 		$this->EE->load->helper("file");
 		
-		$this->html_root = "";
-		$this->cache_dir = "";
-		$this->cache_web_path = ""; 
+		// --------------------- MODIFY THESE VARIABLES --------------------- 
+			/* 
+			 	Full path to your HTML root directory
+			 	ex: d://my_full_server_path/html/
+			*/
+				$this->html_root = "";
+			
+			/*
+				Full Server Path to the directory where these merged files will be stored, this folder should be accessible from the web
+				ex: d://my_full_server_path/html/cache_dir/	
+			*/
+				$this->cache_dir = ""; 
+			
+			 /*
+			 	Web accessible path to your cache directory
+			 	ex: /cache_dir/	
+			 */
+				$this->cache_web_path = "";
+		
+		// --------------------- END OF MODIFY THESE VARIABLES --------------------- 
 		
 
 	}
