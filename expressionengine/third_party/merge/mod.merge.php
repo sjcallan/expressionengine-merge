@@ -1,15 +1,6 @@
 <?php
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-$plugin_info = array(
-	'pi_name' => 'Merge',
-	'pi_version' =>'1.0',
-	'pi_author' =>'Steve Callan',
-	'pi_author_url' => 'http://www.stevecallan.com/',
-	'pi_description' => 'Merges multiple local CSS or Javascript files into single files to limit the number of HTTP requests. test',
-	'pi_usage' => merge::usage()
-);
-
 /**
 * Merge Class
 *
@@ -31,23 +22,28 @@ class Merge {
 			 	Full path to your HTML root directory
 			 	ex: d://my_full_server_path/html/
 			*/
-				$this->html_root = "";
+				$this->html_root = $this->EE->config->item("merge_html_root");
 			
 			/*
 				Full Server Path to the directory where these merged files will be stored, this folder should be accessible from the web
 				ex: d://my_full_server_path/html/cache_dir/	
 			*/
-				$this->cache_dir = ""; 
+				$this->cache_dir = $this->EE->config->item("merge_cache_path"); 
 			
 			 /*
 			 	Web accessible path to your cache directory
 			 	ex: /cache_dir/	
 			 */
-				$this->cache_web_path = "";
+				$this->cache_web_path = $this->EE->config->item("merge_cache_web_path");
 		
 		// --------------------- END OF MODIFY THESE VARIABLES --------------------- 
 		
 
+	}
+	
+	function jam()
+	{
+		return "Path: " . $this->EE->config->item("merge_html_root");
 	}
 	
 	function build()
@@ -180,33 +176,6 @@ class Merge {
 		{
 			return FALSE;
 		}
-	}
-	
-	function usage()
-	{
-	
-		ob_start(); 
-		?>
-		The ExpressionEngine merge plugin merges multiple local CSS or Javascript files into single files to limit the number of HTTP requests your visitors need to make without you needing to sacrifice your clean directory structure.
-		
-		{exp:merge:build}
-			<link href="my_great_file.css" rel="stylesheet" type="text/css" />
-			<link href="my_second_great_file.css" rel="stylesheet" type="text/css" />
-		{/exp:merge:build}
-		
-		Outputs: <link href="my_great_file_my_second_great_file.css" rel="stylesheet" type="text/css" />
-		
-		Optional parameters:
-		minify ("yes" "no", default = "yes")
-		
-		
-		<?php
-		$buffer = ob_get_contents();
-		
-		ob_end_clean(); 
-		
-		return $buffer;
-	
 	}
 	
 }
