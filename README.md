@@ -1,10 +1,11 @@
 Developer:
 Steve Callan
-3/23/11
+10/17/11
 
 Description:
-The Merge Plugin for ExpressionEngine merges multiple local CSS or Javascript files into single files to limit the number of HTTP requests your visitors need to make without you needing to sacrifice your clean directory structure.
+The Merge Module for ExpressionEngine merges multiple local CSS or Javascript files into single files to limit the number of HTTP requests your visitors need to make without you needing to sacrifice your clean directory structure.
 
 Installation Instructions:
-- Upload the entire /merge folder to your expressionengine/third_party folder
-- Modify your directory variables in the //MODIFY THESE VARIABLES section of the plugin
+1. Upload the entire /merge folder to your expressionengine/third_party folder
+2. Log into your ExpressionEngine Control Panel and install the add-on through Add-Ons->Modules
+3. Modify your directory variables on the Merge Settings page
