@@ -1,5 +1,14 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+/**
+* Merge Control Panel Class
+*
+* @package		ExpressionEngine
+* @category		Module
+* @author		Steve Callan
+* @copyright	Copyright (c) 2011, Steve Callan
+*/
+
 class Merge_mcp {
 
 

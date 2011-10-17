@@ -5,7 +5,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 * Merge Class
 *
 * @package		ExpressionEngine
-* @category		Plugin
+* @category		Module
 * @author		Steve Callan
 * @copyright	Copyright (c) 2011, Steve Callan
 */
@@ -17,7 +17,7 @@ class Merge {
 		$this->EE =& get_instance();
 		$this->EE->load->helper("file");
 		
-		// --------------------- MODIFY THESE VARIABLES --------------------- 
+		// --------------------- PREFERNCE VARIABLES --------------------- 
 			/* 
 			 	Full path to your HTML root directory
 			 	ex: d://my_full_server_path/html/
@@ -36,14 +36,9 @@ class Merge {
 			 */
 				$this->cache_web_path = $this->EE->config->item("merge_cache_web_path");
 		
-		// --------------------- END OF MODIFY THESE VARIABLES --------------------- 
+		// --------------------- END OF PREFERNCE VARIABLES --------------------- 
 		
 
-	}
-	
-	function jam()
-	{
-		return "Path: " . $this->EE->config->item("merge_html_root");
 	}
 	
 	function build()

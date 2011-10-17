@@ -1,5 +1,14 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+/**
+* Merge Update Class
+*
+* @package		ExpressionEngine
+* @category		Module
+* @author		Steve Callan
+* @copyright	Copyright (c) 2011, Steve Callan
+*/
+
 class Merge_upd {
 
 	var $version = '1.0';

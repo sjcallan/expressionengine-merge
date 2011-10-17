@@ -38,6 +38,6 @@ echo $this->table->generate();
 
 ?>
 
-	<?=form_submit(array('name' => 'submit', 'value' => lang('submit'), 'class' => 'submit'))?>
+<?=form_submit(array('name' => 'submit', 'value' => lang('submit'), 'class' => 'submit'))?>
 
 <?=form_close()?>
