@@ -36,7 +36,7 @@ class Merge_upd {
 			'module_name' => 'Merge' ,
 			'module_version' => $this->version,
 			'has_cp_backend' => 'y',
-			'has_publish_fields' => 'y'
+			'has_publish_fields' => 'n'
 		);
 		
 		$this->EE->db->insert('exp_modules', $data);
